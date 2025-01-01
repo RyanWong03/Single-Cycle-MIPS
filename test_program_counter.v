@@ -3,8 +3,8 @@
 
 module program_counter_test_bench;
    reg clock;
-   reg pc_in_addr;
-   wire	pc_out_addr;
+   reg [31:0] pc_in_addr;
+   wire	[31:0] pc_out_addr;
    
    program_counter PC(clock, pc_in_addr, pc_out_addr);
 
@@ -32,6 +32,9 @@ module program_counter_test_bench;
 	 $display("Test failed. in = %d, expected = %d", pc_in_addr, pc_out_addr);
 	 $finish;
       end
+
+      $display("All tests passed.");
+      $finish;
    end
 endmodule // program_counter_test_bench
 
