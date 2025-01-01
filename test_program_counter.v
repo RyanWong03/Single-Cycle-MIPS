@@ -26,11 +26,12 @@ module program_counter_test_bench;
 	 $finish;
       end
 
-      pc_in_addr = 32'h000000004;
+      pc_in_addr = 32'h00000004;
       #20;
       if(pc_out_addr != 32'h00000004) begin
 	 $display("Test failed. in = %d, expected = %d", pc_in_addr, pc_out_addr);
 	 $finish;
       end
-      endmodule // program_counter_test_bench
+   end
+endmodule // program_counter_test_bench
 
